@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lime: '#E5FE40', // Highlight lime/yellow accent color
+                            dark: '#0D0D0D',
+                            cardBg: 'rgba(18, 18, 18, 0.75)',
+                            borderGray: 'rgba(255, 255, 255, 0.25)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0A0A0C] text-white font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-brand-lime selection:text-black">
+
+    <!-- ABOUT & FACILITIES -->
+<section class="gym-section gym-about" id="gym-about">
+    <div class="gym-section-heading">
+        <span class="gym-tag">MORE THAN A GYM</span>
+        <h2>BUILT FOR YOUR <span>PROGRESS.</span></h2>
+        <p>
+            Train with purpose in an environment designed to help
+            you become stronger, healthier and more confident.
+        </p>
+    </div>
+
+    <div class="gym-facilities">
+        <article class="facility-card">
+            <div class="facility-number">01</div>
+            <h3>Strength Training</h3>
+            <p>Build strength with quality equipment and dedicated workout spaces.</p>
+        </article>
+
+        <article class="facility-card">
+            <div class="facility-number">02</div>
+            <h3>Personal Coaching</h3>
+            <p>Get guidance and support to work towards your fitness goals.</p>
+        </article>
+
+        <article class="facility-card">
+            <div class="facility-number">03</div>
+            <h3>Cardio Zone</h3>
+            <p>Improve endurance with dedicated cardio equipment.</p>
+        </article>
+
+        <article class="facility-card">
+            <div class="facility-number">04</div>
+            <h3>Changing Rooms</h3>
+            <p>Freshen up before and after your training sessions.</p>
+        </article>
+    </div>
+</section>
+
+</body>
+</html>

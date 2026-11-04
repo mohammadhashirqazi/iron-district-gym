@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFlex - Achieve More Than Just Fitness</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lime: '#E5FE40', // Highlight lime/yellow accent color
+                            dark: '#0D0D0D',
+                            cardBg: 'rgba(18, 18, 18, 0.75)',
+                            borderGray: 'rgba(255, 255, 255, 0.25)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Custom Styles & Background Overlay Setup */
+        .hero-bg {
+            /* REPLACE THE IMAGE URL BELOW WITH YOUR BACKGROUND IMAGE LINK */
+            background-image: url(''); /* Insert your background image URL here */
+            background-size: cover;
+            background-position: center right;
+            background-repeat: no-repeat;
+        }
+
+        /* Subtle dark gradient overlay so text remains perfectly readable over any background */
+        .hero-overlay {
+            background: linear-gradient(
+                90deg, 
+                #0a0a0c 0%, 
+                rgba(10, 10, 12, 0.92) 40%, 
+                rgba(10, 10, 12, 0.5) 70%, 
+                rgba(10, 10, 12, 0.2) 100%
+            );
+        }
+
+        /* Decorative top-right angled light ray gradient effect as seen in original design */
+        .angled-accent {
+            background: linear-gradient(
+                135deg, 
+                rgba(229, 254, 64, 0.08) 0%, 
+                rgba(229, 254, 64, 0.02) 50%, 
+                transparent 70%
+            );
+        }
+        .hero-bg {
+       background-image: url('./Gemini_Generated_Image_px8m8cpx8m8cpx8m.jpg');
+       }
+    </style>
+</head>
+<body class="bg-[#0A0A0C] text-white font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-brand-lime selection:text-black">
+
+    <!-- HERO BACKGROUND CONTAINER -->
+    <div class="relative w-full min-h-screen flex flex-col justify-between hero-bg">
+        
+        <!-- DARK GRADIENT OVERLAY -->
+        <div class="absolute inset-0 hero-overlay pointer-events-none"></div>
+
+        <!-- TOP RIGHT ANGLED HIGHLIGHT -->
+        <div class="absolute top-0 right-0 w-1/2 h-96 angled-accent pointer-events-none transform -skew-x-12 origin-top-right"></div>
+
+        <!-- NAVBAR -->
+        <header class="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <svg class="w-8 h-8 text-brand-lime transition-transform group-hover:scale-105" viewBox="0 0 24 24" fill="currentColor">
+                    <!-- Dumbbell Icon -->
+                    <path d="M6 5a1 1 0 0 0-1 1v12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1zm12 0a1 1 0 0 0-1 1v12a1 1 0 0 0 2 0V6a1 1 0 0 0-1-1zM3 8a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0V9a1 1 0 0 0-1-1zm18 0a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0V9a1 1 0 0 0-1-1zM8 11h8v2H8z"/>
+                </svg>
+                <span class="font-heading font-black text-2xl tracking-tight text-white">Fit<span class="text-white">Flex</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-300">
+                <a href="./fitflex_hero_landing_page.html" class="text-white hover:text-brand-lime transition-colors duration-200">Home</a>
+                <a href="./about.html" class="hover:text-brand-lime transition-colors duration-200">About Us</a>
+                <a href="./membership.html" class="hover:text-brand-lime transition-colors duration-200">Classes</a>
+                <a href="./trainers.html" class="hover:text-brand-lime transition-colors duration-200">Timetable</a>
+            </nav>
+
+            <!-- Contact CTA Button -->
+            <div class="hidden sm:block">
+                <a href="https://wa.me/92XXXXXXXXXX?text=Hello%20IRON%20DISTRICT%2C%20I%20want%20to%20know%20about%20your%20gym%20membership." class="inline-block px-7 py-2.5 border border-white/40 text-xs font-bold tracking-widest uppercase hover:bg-white hover:text-black transition-all duration-300">
+                    CONTACT
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="menuBtn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- MOBILE MENU OVERLAY -->
+        <div id="mobileMenu" class="hidden md:hidden fixed inset-0 z-30 bg-black/95 flex flex-col items-center justify-center space-y-8 text-lg font-semibold">
+            <button id="closeBtn" class="absolute top-6 right-6 text-white text-2xl" aria-label="Close Menu">&times;</button>
+            <a href="#home" class="mobile-link text-brand-lime">Home</a>
+            <a href="#about" class="mobile-link text-white hover:text-brand-lime">About Us</a>
+            <a href="#classes" class="mobile-link text-white hover:text-brand-lime">Classes</a>
+            <a href="#timetable" class="mobile-link text-white hover:text-brand-lime">Timetable</a>
+            <a href="#contact" class="mobile-link px-8 py-3 border border-white text-xs font-bold tracking-widest uppercase text-white hover:bg-white hover:text-black">CONTACT</a>
+        </div>
+
+        <!-- MAIN HERO CONTENT -->
+        <main class="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-20 flex-1 flex items-center">
+            <div class="max-w-2xl space-y-6">
+                <!-- Main Headline -->
+                <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-[1.08] text-white">
+                    <span class="text-brand-lime">ACHIEVE</span> MORE THAN<br class="hidden sm:block"/>
+                    JUST FITNESS
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-gray-300 text-sm sm:text-base leading-relaxed max-w-lg font-normal pt-2">
+                    Combine strength, flexibility, and endurance in a community that values well-rounded health and supportive growth.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="pt-4 flex flex-wrap items-center gap-4">
+                    <!-- Primary CTA -->
+                    <a href="#start" class="px-8 py-3.5 bg-brand-lime text-black font-extrabold text-xs tracking-wider uppercase shadow-lg shadow-brand-lime/20 hover:bg-white transition-all duration-300 transform hover:-translate-y-0.5">
+                        START NOW
+                    </a>
+                    <!-- Secondary CTA -->
+                    <a href="#trial" class="px-8 py-3.5 border border-white/30 text-white font-extrabold text-xs tracking-wider uppercase hover:border-white hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-0.5">
+                        JOIN FREE TRIAL
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- STATS STRIP / FOOTER OVERLAY -->
+        <footer class="relative z-20 w-full border-t border-white/10 bg-black/40 backdrop-blur-md">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 text-center">
+                
+                <!-- Stat 1 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">500+</span>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">30+</span>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">10</span>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="flex flex-col items-center justify-center">
+                    <span class="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">99%</span>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Mobile Menu & Interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menuBtn');
+            const closeBtn = document.getElementById('closeBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function openMenu() {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            if (menuBtn && closeBtn && mobileMenu) {
+                menuBtn.addEventListener('click', openMenu);
+                closeBtn.addEventListener('click', closeMenu);
+
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

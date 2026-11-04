@@ -1,0 +1,295 @@
+
+/* ==============================
+   IRON DISTRICT - DAY 04
+================================ */
+
+.gym-section {
+    padding: 100px 6%;
+    background: #101010;
+    color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+.gym-section-heading {
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.gym-tag {
+    color: #dfff55;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.gym-section-heading h2,
+.gym-contact h2 {
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.1;
+    margin: 18px 0;
+    font-weight: 900;
+}
+
+.gym-section h2 span,
+.gym-contact h2 span,
+.gym-footer h3 span {
+    color: #dfff55;
+}
+
+.gym-section-heading p,
+.gym-contact p {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+/* FACILITIES */
+
+.gym-about {
+    background: #151515;
+}
+
+.gym-facilities {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.facility-card {
+    padding: 30px 24px;
+    min-height: 210px;
+    background: #202020;
+    border: 1px solid #333;
+    transition: 0.3s ease;
+}
+
+.facility-card:hover {
+    transform: translateY(-6px);
+    border-color: #dfff55;
+}
+
+.facility-number {
+    color: #dfff55;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.facility-card h3 {
+    margin-top: 35px;
+    font-size: 19px;
+}
+
+.facility-card p {
+    color: #999;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* MEMBERSHIP */
+
+.gym-memberships {
+    background: #0d0d0d;
+}
+
+.membership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.membership-card {
+    background: #191919;
+    border: 1px solid #333;
+    padding: 35px 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.featured-plan {
+    border: 1px solid #dfff55;
+    transform: translateY(-10px);
+}
+
+.plan-label {
+    color: #dfff55;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.membership-card h3 {
+    font-size: 28px;
+    margin: 18px 0;
+}
+
+.plan-price {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.plan-price small {
+    color: #999;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.membership-card ul {
+    padding-left: 18px;
+    margin: 25px 0;
+    color: #bbb;
+    line-height: 2.4;
+    flex-grow: 1;
+}
+
+.plan-button {
+    display: block;
+    text-align: center;
+    padding: 14px 10px;
+    color: #111;
+    background: #dfff55;
+    font-weight: 800;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.plan-button:hover {
+    background: #fff;
+}
+
+/* TRAINERS */
+
+.gym-trainers {
+    background: #151515;
+}
+
+.trainer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.trainer-card {
+    background: #202020;
+    border: 1px solid #333;
+}
+
+.trainer-placeholder {
+    min-height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #303030, #111);
+    color: #dfff55;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.trainer-info {
+    padding: 20px;
+}
+
+.trainer-info h3 {
+    margin: 0 0 8px;
+}
+
+.trainer-info p {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.gym-disclaimer {
+    margin-top: 25px;
+    color: #777;
+    font-size: 12px;
+}
+
+/* WHATSAPP CONTACT */
+
+.gym-contact {
+    text-align: center;
+    background: #202020;
+    padding: 110px 6%;
+}
+
+.gym-contact p {
+    margin: 0 auto 30px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 17px 28px;
+    background: #dfff55;
+    color: #111;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: 0.2s;
+}
+
+.whatsapp-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+
+.gym-footer {
+    background: #080808;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.gym-footer h3 {
+    font-size: 25px;
+}
+
+.gym-footer p {
+    color: #999;
+    letter-spacing: 2px;
+    font-size: 11px;
+}
+
+.gym-footer small {
+    color: #666;
+    font-size: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+    .gym-facilities {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .membership-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-plan {
+        transform: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .gym-section {
+        padding: 70px 6%;
+    }
+
+    .gym-facilities,
+    .trainer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gym-section-heading h2,
+    .gym-contact h2 {
+        font-size: 34px;
+    }
+
+    .trainer-placeholder {
+        min-height: 190px;
+    }
+}
+

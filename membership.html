@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Montserrat & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            lime: '#E5FE40', // Highlight lime/yellow accent color
+                            dark: '#0D0D0D',
+                            cardBg: 'rgba(18, 18, 18, 0.75)',
+                            borderGray: 'rgba(255, 255, 255, 0.25)'
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0A0A0C] text-white font-sans antialiased min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-brand-lime selection:text-black">
+<!-- MEMBERSHIP PLANS -->
+<section class="gym-section gym-memberships" id="gym-memberships">
+    <div class="gym-section-heading">
+        <span class="gym-tag">INVEST IN YOURSELF</span>
+        <h2>CHOOSE YOUR <span>PLAN.</span></h2>
+        <p>Simple membership options to help you stay consistent.</p>
+    </div>
+
+    <div class="membership-grid">
+
+        <article class="membership-card">
+            <span class="plan-label">STARTER</span>
+            <h3>Basic</h3>
+            <div class="plan-price">Rs. 3,000 <small>/ month</small></div>
+
+            <ul>
+                <li>Gym access</li>
+                <li>Strength equipment</li>
+                <li>Locker facility</li>
+                <li>General workout guidance</li>
+            </ul>
+
+            <a href="#gym-contact" class="plan-button">GET STARTED</a>
+        </article>
+
+        <article class="membership-card featured-plan">
+            <span class="plan-label">MOST POPULAR</span>
+            <h3>Premium</h3>
+            <div class="plan-price">Rs. 5,000 <small>/ month</small></div>
+
+            <ul>
+                <li>Full gym access</li>
+                <li>Cardio and strength zones</li>
+                <li>Personal workout guidance</li>
+                <li>Progress tracking</li>
+            </ul>
+
+            <a href="#gym-contact" class="plan-button">CHOOSE PREMIUM</a>
+        </article>
+
+        <article class="membership-card">
+            <span class="plan-label">ADVANCED</span>
+            <h3>Elite</h3>
+            <div class="plan-price">Rs. 8,000 <small>/ month</small></div>
+
+            <ul>
+                <li>All Premium benefits</li>
+                <li>Personal training sessions</li>
+                <li>Fitness assessment</li>
+                <li>Priority support</li>
+            </ul>
+
+            <a href="#gym-contact" class="plan-button">GO ELITE</a>
+        </article>
+
+    </div>
+    <p class="gym-disclaimer">Demo prices for this concept website. Actual prices may vary.</p>
+</section>
+
+</body>
+</html>
